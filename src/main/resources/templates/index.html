@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Auction House</title>
+    <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/main.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row jumbotron" id="header">
+        <div class="col-12">
+            <h1>AUCTION HOUSE</h1>
+        </div>
+    </div>
+
+    <div class="row jumbotron" id="menu">
+        <div class="col"><a href="/templates/insert.html">Insert</a></div>
+        <div class="col"><a href="#">Select</a></div>
+        <div class="col"><a href="#">Update</a></div>
+        <div class="col"><a href="#">Delete</a></div>
+    </div>
+
+    <div class="row jumbotron" id="content">
+        <div class="col-12">
+            <th:block th:replace="this :: content">
+                content
+            </th:block>
+        </div>
+
+    </div>
+
+    <div class="row jumbotron" id="footer">
+        <div class="col-12">
+            <p>Some text</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
