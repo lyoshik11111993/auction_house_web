@@ -11,7 +11,7 @@ import org.springframework.validation.Validator;
 public class BidValidator implements Validator{
     @Override
     public boolean supports(Class<?> aClass) {
-        return BidValidator.class.equals(aClass);
+        return BidDTO.class.equals(aClass);
     }
 
     @Override

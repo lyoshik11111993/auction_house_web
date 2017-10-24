@@ -1,6 +1,9 @@
 package com.example.web.controller.insert;
 
 import com.example.web.config.AppPaths;
+import com.example.web.dto.BidDTO;
+import com.example.web.dto.BuyerDTO;
+import com.example.web.dto.ProductDTO;
 import com.example.web.dto.SellerDTO;
 import com.example.web.intrf.SellerService;
 import com.example.web.validator.SellerValidator;

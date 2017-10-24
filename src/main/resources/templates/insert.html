@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      th:include="index">
 
 <head>
     <meta charset="UTF-8"/>
@@ -11,16 +12,16 @@
 <body>
 <div th:fragment="content">
     <div class="jumbotron">
-        <form th:object="${seller}" th:action="@{/insertseller}" th:method="post">
+        <form th:object="${seller}" action="/insertseller" th:method="post">
             <h4>Add a seller</h4>
             <div class="form-group">
                 <label for="seller_name">Name</label>
                 <input type="text" class="form-control" id="seller_name" name="seller_name"
-                       placeholder="Enter name" th:field="*{name}">
+                       placeholder="Enter name" th:field="*{name}"/>
                 <span class="alert alert-danger"
                       th:if="${errors!=null and errors.get('name')!=null}" th:text="${errors.get('name')}"></span>
             </div>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary"/>
         </form>
     </div>
     <div class="jumbotron">
@@ -29,11 +30,11 @@
             <div class="form-group">
                 <label for="buyer_name">Name</label>
                 <input type="text" class="form-control" id="buyer_name" name="buyer_name"
-                       placeholder="Enter name" th:field="*{name}">
+                       placeholder="Enter name" th:field="*{name}"/>
                 <span class="alert alert-danger"
                       th:if="${errors!=null and errors.get('name')!=null}" th:text="${errors.get('name')}"></span>
             </div>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary"/>
         </form>
     </div>
     <div class="jumbotron">
@@ -42,18 +43,18 @@
             <div class="form-group">
                 <label for="product_name">Name</label>
                 <input type="text" class="form-control" id="product_name" name="product_name"
-                       placeholder="Enter name" th:field="*{name}">
+                       placeholder="Enter name" th:field="*{name}"/>
                 <span class="alert alert-danger"
                       th:if="${errors!=null and errors.get('name')!=null}" th:text="${errors.get('name')}"></span>
             </div>
             <div class="form-group">
                 <label for="seller_id">Seller`s ID</label>
                 <input type="text" class="form-control" id="seller_id" name="seller_id"
-                       placeholder="Enter seller`s ID" th:field="*{sellerId}">
+                       placeholder="Enter seller`s ID" th:field="*{sellerId}"/>
                 <span class="alert alert-danger"
                       th:if="${errors!=null and errors.get('sellerId')!=null}" th:text="${errors.get('sellerId')}"></span>
             </div>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary"/>
         </form>
     </div>
     <div class="jumbotron">
@@ -62,25 +63,25 @@
             <div class="form-group">
                 <label for="size">Size</label>
                 <input type="text" class="form-control" id="size" name="size"
-                       placeholder="Enter a size" th:field="*{size}">
+                       placeholder="Enter a size" th:field="*{size}"/>
                 <span class="alert alert-danger"
                       th:if="${errors!=null and errors.get('size')!=null}" th:text="${errors.get('size')}"></span>
             </div>
             <div class="form-group">
                 <label for="buyer_id">Buyer`s ID</label>
                 <input type="text" class="form-control" id="buyer_id" name="buyer_id"
-                       placeholder="Enter buyer`s ID" th:field="*{buyerId}">
+                       placeholder="Enter buyer`s ID" th:field="*{buyerId}"/>
                 <span class="alert alert-danger"
                       th:if="${errors!=null and errors.get('buyerId')!=null}" th:text="${errors.get('buyerId')}"></span>
             </div>
             <div class="form-group">
                 <label for="product_id">Product`s ID</label>
                 <input type="text" class="form-control" id="product_id" name="product_id"
-                       placeholder="Enter product`s ID" th:field="*{productId}">
+                       placeholder="Enter product`s ID" th:field="*{productId}"/>
                 <span class="alert alert-danger"
                       th:if="${errors!=null and errors.get('productId')!=null}" th:text="${errors.get('productId')}"></span>
             </div>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" class="btn btn-primary"/>
         </form>
     </div>
 </div>

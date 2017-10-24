@@ -10,7 +10,7 @@ import org.springframework.validation.Validator;
 public class SellerValidator implements Validator{
     @Override
     public boolean supports(Class<?> aClass) {
-        return SellerValidator.class.equals(aClass);
+        return SellerDTO.class.equals(aClass);
     }
 
     @Override
